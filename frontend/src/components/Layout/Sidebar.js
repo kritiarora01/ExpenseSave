@@ -16,6 +16,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+import BarChartIcon from "@material-ui/icons/BarChart";
 import "../../styles/sidebar.scss";
 import Dashboard from "./Dashboard";
 import Login from "./Login";
@@ -86,6 +87,14 @@ function Sidebar(props) {
             <ViewListIcon />
           </ListItemIcon>
           <ListItemText primary="View Expense" />
+        </ListItem>
+      </Link>
+      <Link to="/monthly-report">
+        <ListItem>
+          <ListItemIcon>
+            <BarChartIcon />
+          </ListItemIcon>
+          <ListItemText primary="Monthly Report" />
         </ListItem>
       </Link>
       <ListItem className="buttonS" onClick={handleThemeChange}>

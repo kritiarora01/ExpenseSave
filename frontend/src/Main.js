@@ -1,6 +1,7 @@
 import React,{useEffect,useContext} from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Sidebar from "./components/Layout/Sidebar";
+import MonthlyReport from "./components/Layout/MonthlyReport";
 import CreateExpense from "./components/Layout/CreateExpense";
 import ViewExpenses from "./components/Layout/ViewExpenses";
 import { makeStyles } from "@material-ui/core/styles";
@@ -63,9 +64,12 @@ const {user,fetchUser}=useContext(GlobalContext);
           <Route exact path="/viewExpense">
             <ViewExpenses />
           </Route>
+          <Route exact path="/monthly-report">
+            <MonthlyReport />
+          </Route>
 
           <Redirect to="/" />
-         
+        
         </Switch>
           }
           
