@@ -26,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     right: theme.spacing(18),
     bottom: theme.spacing(6),
+    background: "linear-gradient(135deg, #5C6BC0, #26C6DA)",
+    color: "#fff",
+    "&:hover": {
+      background: "linear-gradient(135deg, #3949AB, #00ACC1)",
+    }
   },
   textFieldStyle: {
     paddingBottom: theme.spacing(2),
@@ -202,14 +207,19 @@ function Upload() {
           </DialogContent>
               <div style={{paddingLeft:"15px",color:"red"}}>{fileError || error}</div>
           <DialogActions>
-            <Button
-              type="submit"
-              variant="contained"
-              color="secondary"
-              onClick={handleSubmit}
-            >
-              Submit
-            </Button>
+          <Button
+  type="submit"
+  variant="contained"
+  onClick={handleSubmit}
+  style={{
+    background: "linear-gradient(135deg, #5C6BC0, #26C6DA)",
+    color: "#fff",
+    borderRadius: "8px",
+    padding: "8px 24px"
+  }}
+>
+  Submit
+</Button>
           </DialogActions>
         </Dialog>
       </div>

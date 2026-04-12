@@ -1,12 +1,29 @@
-ul{
-    a{
-        text-decoration: none;
-        // color: grey ;
-    }
-    span{
-        color: grey;
-    }
+a {
+    text-decoration: none;
+    color: inherit;
 }
-.buttonS{
+
+.MuiDrawer-paper {
+    background-color: #1A1F36 !important;
+    color: #fff !important;
+}
+
+.MuiAppBar-colorSecondary {
+    background: linear-gradient(135deg, #5C6BC0 0%, #26C6DA 100%) !important;
+}
+
+.MuiListItemText-primary {
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.MuiListItemIcon-root {
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.MuiTypography-root.MuiTypography-body2 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.buttonS {
     cursor: pointer;
 }

@@ -48,12 +48,12 @@ const {user,fetchUser}=useContext(GlobalContext);
   // }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{ background: "#F5F6FA" }}>
       <BrowserRouter>
     {user===false || user===null ? null : <Sidebar darkMode={darkModeFunction} />} 
     {/* <Sidebar darkMode={darkModeFunction} /> */}
-
-        <div className={classes.content}>
+    <div className={classes.root} style={{ background: "#F5F6FA", minHeight: "100vh" }}></div>
+    <div className={classes.content} style={{ background: "#F5F6FA", minHeight: "100vh" }}>
           <div className={classes.toolbar} />
           {user==null || user==false ? null : 
           <Switch>
@@ -76,6 +76,7 @@ const {user,fetchUser}=useContext(GlobalContext);
           </div>
       </BrowserRouter>
     </div>
+    
   );
 }
 

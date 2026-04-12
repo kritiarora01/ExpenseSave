@@ -6,6 +6,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { GlobalProvider,GlobalContext } from "./context/GlobalState";
 import Login from './components/Layout/Login';
 
+
 function App() {
   const [DarkMode, setDarkMode] = useState(false);
 const {user,fetchUser}=useContext(GlobalContext);
@@ -18,13 +19,20 @@ const {user,fetchUser}=useContext(GlobalContext);
 
   const Theme = createMuiTheme({
     palette: {
-      // primary:{
-      //   main:'#00838f'
-      // },
-      // secondary:{
-      //   main:"#263238"
-      // },
       type: typeP,
+      background: {
+        default: "#F5F6FA",
+        paper: "#ffffff",
+      },
+    },
+    overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          body: {
+            backgroundColor: '#F5F6FA',
+          },
+        },
+      },
     },
   });
   useEffect(()=>{
@@ -33,10 +41,9 @@ const {user,fetchUser}=useContext(GlobalContext);
   return (
       <ThemeProvider theme={Theme}>
         <CssBaseline />
-        <div className="App">
-          {user==false ? <Login />:<Main darkMode={darkModeFunc} />}
-          
-        </div>
+        <div className="App" style={{ background: "#F5F6FA", minHeight: "100vh" }}>
+        {user==false ? <Login />:<Main darkMode={darkModeFunc} />}
+      </div>
       </ThemeProvider>
   );
 }
