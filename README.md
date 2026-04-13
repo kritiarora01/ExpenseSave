@@ -108,3 +108,39 @@ In [Google Cloud Console](https://console.cloud.google.com):
 ---
 
 ## 📁 Project Structure
+ExpenseSave/
+├── config/
+│   ├── db.js
+│   └── passport-setup.js
+├── controllers/
+│   └── expenses.js
+├── models/
+│   ├── user.js
+│   └── expense.js
+├── routes/
+│   ├── auth.js
+│   └── expense.js
+├── frontend/
+│   └── src/
+│       ├── components/
+│       ├── context/
+│       └── styles/
+└── index.js
+
+---
+
+## 🔒 Security
+- Environment variables never committed to repository
+- Google OAuth handles all authentication
+- Sessions encrypted using cookie-session
+
+---
+
+## 👩‍💻 Author
+
+**Kriti Arora**
+- GitHub: [@kritiarora01](https://github.com/kritiarora01)
+
+---
+
+> ⭐ If you found this project helpful, give it a star!
