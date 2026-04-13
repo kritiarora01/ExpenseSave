@@ -108,7 +108,7 @@ In [Google Cloud Console](https://console.cloud.google.com):
 ---
 
 ## 📁 Project Structure
-\```
+```
 ExpenseSave/
 ├── config/
 │   ├── db.js
@@ -127,7 +127,7 @@ ExpenseSave/
 │       ├── context/
 │       └── styles/
 └── index.js
-\```
+```
 ---
 
 ## 🔒 Security
