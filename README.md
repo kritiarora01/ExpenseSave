@@ -1,64 +1,110 @@
-# ExpenseSave 💰
+# 💰 ExpenseSave
 
-The **ExpenseSave** application will help the users to track their expenses and manage their personal finances.
+> A smart, full-stack personal finance tracker built with the MERN stack — track your income, monitor expenses, and visualize your financial data.
 
-### About the app :
-A Full Stack Web Application built with MERN Stack.
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Google OAuth](https://img.shields.io/badge/Google_OAuth-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
-The best part of this web application is that apart from the manually editing expenses there is an extra feature added wherein the user can upload the picture
-of the receipt and the application will collect data from it.
+---
 
-Users can then visualize the data using pie charts in the front end.
+## 📸 Screenshots
 
-### For setting up this project :
+### Login Page
+![Login](screenshots/login.png)
 
-##### 1)Create a _config.env_ file inside the config folder.
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-##### 2)Add Required Environment Variables into this _config.env_ file as:
+### View Expenses
+![View Expenses](screenshots/view-expenses.png)
 
-  MONGO_URI : Url to connect with MongoDB
+### Monthly Report
+![Monthly Report](screenshots/monthly-report.png)
 
-  PORT : port to run the server
+---
 
-  clientID : Google Client Id for interacting with google oauth api
+## ✨ Features
 
-  clientSecret : Google secret for interacting with google oauth api
+- 🔐 **Google OAuth 2.0** — Secure one-click login with Google
+- 📊 **Visual Dashboard** — Income vs expense charts at a glance
+- 📅 **Monthly Reports** — Filter by month/year with bar and pie charts
+- ➕ **Add Transactions** — Log income and expenses with category and date
+- 🧾 **Receipt Scanner** — Upload a receipt image and auto-extract data using OCR
+- 🗑️ **Delete Transactions** — Remove any entry instantly
+- 🌙 **Dark / Light Mode** — Easy on the eyes, any time of day
+- 📱 **Responsive Design** — Works on desktop and mobile
 
-  cookieKey : Used to encrypt the cookies
-  
-  ##### Other Environment Variable:
-  
-  (OCRSPACE API KEY must be configured in the frontend)
-  
-  apikey : Used for interacting with the [OCRSpace API](http://ocr.space/OCRAPI)
+---
 
-##### 3) Installing dependencies:
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React.js, Recharts, Chart.js, Material UI |
+| Backend | Node.js, Express.js |
+| Database | MongoDB, Mongoose |
+| Authentication | Passport.js, Google OAuth 2.0 |
+| OCR | OCRSpace API |
+| Session | Cookie-Session |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js installed
+- MongoDB Atlas account
+- Google Cloud Console project with OAuth 2.0 credentials
+- OCRSpace API key (free at ocr.space)
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/kritiarora01/ExpenseSave.git
+cd ExpenseSave
 ```
+
+### 2. Create `config/config.env`
+```env
+MONGO_URI=your_mongodb_connection_string
+PORT=8000
+clientID=your_google_client_id
+clientSecret=your_google_client_secret
+cookieKey=any_random_secret_string
+```
+
+### 3. Install dependencies
+
+**Backend:**
+```bash
 npm install
 ```
-##### 3.1) Installing dependencies for frontend:
-run in the ./frontend directory
-```
-npm install
+
+**Frontend:**
+```bash
+cd frontend
+npm install --legacy-peer-deps
 ```
 
-##### Running both server and frontend concurrently:
-```
-npm run dev
-```
-##### Running the server:
-```
-npm run server
-```
-##### Running the frontend:
-```
-npm run frontend
+### 4. Run the app
+
+**Backend (port 8000):**
+```bash
+node index.js
 ```
 
-### In Action 🤩
-![ExpenseSave Apllication Demo](Videos&Images/ExpenseSave(video).gif)
+**Frontend (port 3000):**
+```bash
+cd frontend
+npm start
+```
 
+### 5. Google OAuth setup
+In [Google Cloud Console](https://console.cloud.google.com):
+- Add `http://localhost:8000/auth/google/callback` as authorized redirect URI
 
-The receipt that i have uploaded in the above video is -
+---
 
-![Receipt_image](Videos&Images/paymentReceipt2.jpg)
+## 📁 Project Structure
